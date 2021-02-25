@@ -1,0 +1,27 @@
+colorscheme gruvbox
+
+add-highlighter global/ column 80 Error
+add-highlighter global/ number-lines -hlcursor -relative
+add-highlighter global/ regex \h+$ 0:Error
+
+set-option global aligntab false
+set-option global tabstop 4
+set-option global indentwidth 4
+
+# Expand tabs by default
+hook global WinSetOption filetype=.* %{
+    expandtab
+
+    # Expand all tabs to spaces on write
+    hook global BufWritePre .* %{
+        execute-keys -draft '%@'
+    }
+}
+
+hook global WinSetOption filetype=html %{
+    set-option buffer formatcmd 'tidy -config /root/.config/tidy.conf'
+
+    hook global BufWritePre .* %{
+        format
+    }
+}
