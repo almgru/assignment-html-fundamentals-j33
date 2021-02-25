@@ -19,7 +19,7 @@ hook global WinSetOption filetype=.* %{
 }
 
 hook global WinSetOption filetype=html %{
-    set-option buffer formatcmd 'tidy -config /root/.config/tidy.conf'
+    set-option buffer formatcmd 'prettier --parser html'
 
     hook global BufWritePre .* %{
         format

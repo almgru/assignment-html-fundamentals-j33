@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/almgru/assignment-html-fundamentals-j33#readme",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "prettier": "^2.2.1"
   }
 }

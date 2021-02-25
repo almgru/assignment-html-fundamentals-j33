@@ -5,8 +5,7 @@ RUN apk add \
     --no-cache \
     dumb-init \
     nodejs \
-    npm \
-    tidyhtml
+    npm
 
 RUN apk add \
     --no-cache \
@@ -23,7 +22,6 @@ ENV PATH=$PATH:/app/node_modules/.bin
 
 COPY ./dde/res/entrypoint.sh /entrypoint.sh
 COPY ./dde/res/config/kak /root/.config/kak
-COPY ./dde/res/config/tidy.conf /root/.config/tidy.conf
 
 ENTRYPOINT [ "dumb-init", "--" ]
 CMD [ "/entrypoint.sh" ]
