@@ -1,0 +1,5 @@
+# Fill in values and cp this to `.env`
+DDE_UID=1000
+DDE_GID=1000
+DDE_USER=almgru
+DDE_GROUP=almgru
