@@ -19,7 +19,9 @@ hook global WinSetOption filetype=.* %{
 }
 
 hook global WinSetOption filetype=html %{
-    set-option buffer formatcmd 'prettier --parser html'
+    # Tidy exits with a non-zero exit code if it needed to format, which
+    # confuses kakoune, hence `tidy || true`.
+    set-option buffer formatcmd 'tidy || true'
 
     hook global BufWritePre .* %{
         format

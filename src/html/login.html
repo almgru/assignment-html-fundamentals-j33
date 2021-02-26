@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Login | My Cats</title>
-    </head>
-
-    <body>
-        <header>
-            <h1>My Cats</h1>
-            <img src="" alt="Image of my cats lying on the bed." />
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Misty</a></li>
-                    <li><a href="#">Cola</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="/">Go Back</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <h2>Login</h2>
-
-            <form>
-                <!-- If you're wondering: I put input tags inside label tags
+<head>
+    <meta charset="UTF-8">
+    <title>Login | My Cats</title>
+</head>
+<body>
+    <header>
+        <h1>My Cats</h1>
+        <figure>
+            <img src="" alt="Image of my cats lying on the bed.">
+            <figcaption>
+                My cats, Cola (left) and Misty (right).
+            </figcaption>
+        </figure>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Misty</a>
+                </li>
+                <li>
+                    <a href="#">Cola</a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Go Back</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Login</h2>
+        <form>
+            <!--
+                If you're wondering: I put input tags inside label tags
                 because it allows you to skip adding `for` tags to the labels.
-                Reference: https://stackoverflow.com/a/774065 -->
-                <label>
-                    Username:
-                    <input type="" />
-                </label>
+                Reference: https://stackoverflow.com/a/774065
 
-                <label>
-                    Password:
-                    <input type="password" />
-                </label>
-
-                <input type="reset" />
-                <input type="submit" />
-            </form>
-        </main>
-
-        <footer>
-            <span>&copy; 2021 Daniel Alm Grundström</span>
-        </footer>
-    </body>
+                I also wrap input tags in p tags because it is more 'semantic'
+                according to W3C.
+            -->
+            <p><label>Username:<input type=""></label></p>
+            <p><label>Password:<input type="password"></label></p>
+            <p><input type="reset"></p>
+            <p><input type="submit"></p>
+        </form>
+    </main>
+    <footer>
+        <span>&copy; 2021 Daniel Alm Grundström</span>
+    </footer>
+</body>
 </html>

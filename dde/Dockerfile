@@ -6,7 +6,8 @@ RUN apk add \
     dumb-init \
     shadow \
     nodejs \
-    npm
+    npm \
+    tidyhtml
 
 RUN apk add \
     --no-cache \
@@ -46,6 +47,7 @@ RUN npm install
 ENV PATH=$PATH:/app/node_modules/.bin
 
 COPY ./dde/res/config/kak /home/$USER/.config/kak
+COPY ./dde/res/config/tidyrc /home/$USER/.tidyrc
 
 ENTRYPOINT [ "dumb-init", "--" ]
 CMD [ "/entrypoint.sh" ]
