@@ -37,14 +37,13 @@
                 If you're wondering: I put input tags inside label tags
                 because it allows you to skip adding `for` tags to the labels.
                 Reference: https://stackoverflow.com/a/774065
-
-                I also wrap input tags in p tags because it is more 'semantic'
-                according to W3C.
             -->
             <p><label>Username:<input type=""></label></p>
             <p><label>Password:<input type="password"></label></p>
-            <p><input type="reset" value="Reset"></p>
-            <p><input type="submit" value="Submit"></p>
+            <div>
+                <input type="reset" value="Reset"> <input type="submit" value=
+                "Submit">
+            </div>
         </form>
     </main>
     <footer>
