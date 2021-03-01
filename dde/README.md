@@ -21,17 +21,28 @@ folder (the one that contains `package.json`).
 `DDE_GROUP` to the name of your primary group (`id -gn`).
 2. `cp dotenv.template .env`
 
-### 2. Get Kakoune plugins
+### 2. Setup SSH-key
+
+1. Create an ssh-key:
+   ```bash
+       ssh-keygen \
+           -t ed25519\
+           -C "$USER"@html-fundamentals \
+           -f ./dde/ssh/html-fundamentals
+   ```
+2. Add public key to remote.
+
+### 3. Get Kakoune plugins
 
 `git submodule update --init`
 
-## 3. Building the Docker image
+## 4. Building the Docker image
 
 ```bash
 ./dde/build.sh
 ```
 
-## 4. Starting the Docker image
+## 5. Starting the Docker image
 
 ```bash
 ./dde/run.sh

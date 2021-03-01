@@ -8,7 +8,8 @@ RUN apk add \
     nodejs \
     npm \
     tidyhtml \
-    git
+    git \
+    openssh
 
 RUN apk add \
     --no-cache \

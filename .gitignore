@@ -1,2 +1,5 @@
 node_modules/
 .env
+dde/ssh/*
+!dde/ssh/.gitkeep
+!dde/ssh/config
