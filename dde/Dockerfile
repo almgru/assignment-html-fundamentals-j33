@@ -7,7 +7,8 @@ RUN apk add \
     shadow \
     nodejs \
     npm \
-    tidyhtml
+    tidyhtml \
+    git
 
 RUN apk add \
     --no-cache \
@@ -45,6 +46,8 @@ COPY package-lock.json .
 
 RUN npm install
 ENV PATH=$PATH:/app/node_modules/.bin
+ENV EDITOR=kak
+ENV VISUAL=kak
 
 COPY ./dde/res/config/kak /home/$USER/.config/kak
 COPY ./dde/res/config/tidyrc /home/$USER/.tidyrc
