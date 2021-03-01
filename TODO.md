@@ -4,3 +4,5 @@
 and handles tag closing incorrectly.
 - [X] Rename "Aside" headline
 - [X] Change sign-in button text to "Sign In"
+- [X] Add npm start script
+- [X] Add run instructions
