@@ -27,10 +27,10 @@ folder (the one that contains `package.json`).
 
 1. Create an ssh-key:
    ```bash
-       ssh-keygen \
-           -t ed25519\
-           -C "$USER"@html-fundamentals \
-           -f ./dde/ssh/html-fundamentals
+   ssh-keygen \
+       -t ed25519\
+       -C "$USER"@html-fundamentals \
+       -f ./dde/ssh/html-fundamentals
    ```
 2. Add public key to remote.
 
