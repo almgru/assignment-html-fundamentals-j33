@@ -1,10 +1,12 @@
 # Dockerized/Reproducable development environment
 
+**Note:** This is not related to the assignment.
+
 This Docker image includes all development dependencies for my development
 workflow on this project. When started, it runs a live server which reloads on
 changes in the background and a shell in the foreground. The editor *Kakoune*
 is available with the `kak` command and is configured to automatically format
-the html file on save.
+the html file on save. `git` is also set up with Kakoune as the core editor.
 
 ## How to use
 
